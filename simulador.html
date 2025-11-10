@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simular Crédito - CreditJuli</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a>
+                <img src="icons8-merchant-account-48.png" alt="CreditJuli" class="logo-imagen">
+                <h1 class="logo">CreditJuli</h1>
+            </a>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="simulador.html" class="active">Simular Crédito</a></li>
+                <li><a href="solicitar.html">Solicitar Crédito</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero"> 
+        <div class="container"> 
+            <h2>Calcula tu Próximo Crédito</h2>
+            <p>Ingresa los detalles para ver una estimación de tu cuota mensual.</p>
+        </div>
+    </header>
+
+    <main class="container simulator-main">
+        <div class="simulator-card">
+            <h2>Calculadora de Cuotas</h2>
+            
+            <div class="form-group">
+                <label for="monto">Monto del Préstamo ($):</label>
+                <input type="number" id="monto" value="monto_solicitado" min="500000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tasa">Tasa de Interés Anual (%):</label>
+                <input type="number" id="tasa" value="1.8" step="1.0" min="1" max="30" required>
+            </div>
+
+            <div class="form-group">
+                <label for="plazo">Tiempo de Plazo:</label>
+                <select id="plazo" required>
+                    <option value="12" selected>12 meses</option>
+                    <option value="24">24 meses</option>
+                    <option value="36">36 meses</option>
+                    <option value="4">4 años</option>
+                    <option value="5">5 años</option>
+                </select>
+            </div>
+
+            <button onclick="calcularCuota()" class="btn-primary">Calcular Cuota</button>
+
+            <div id="resultado" class="simulation-results">
+                <h4>Resultado de la Simulación:</h4>
+                <p id="cuota-mensual" class="result-value">Cuota Mensual: $ 0</p>
+                <p id="total-intereses" class="result-value-small">Total Intereses: $ 0</p>
+                <p id="total-pagar" class="result-value-small">Total a Pagar: $ 0</p>
+            </div>
+            
+        </div>
+    </main>
+    <footer>
+    <div class="container footer-grid">
+        <div class="footer-info">
+            <a href="index.html" class="logo-link">
+                <img src="icons8-merchant-account-48.png" alt="CreditJuli" class="logo-imagen">
+                <h1 class="logo">CreditJuli</h1>
+            </a>
+            <p class="footer-tagline">Tu aliado financiero para alcanzar grandes metas.</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/573001234567" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-links">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="simulador.html">Simulador de Crédito</a></li>
+                <li><a href="solicitar.html">Solicitar Crédito</a></li>
+                <li><a href="#">FAQ / Ayuda</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-contact">
+            <h4>Contáctanos</h4>
+            <p><strong>Teléfono:</strong> (123) 456-7890</p>
+            <p><strong>Email:</strong> contacto@creditjuli.com</p>
+            <p><strong>Dirección:</strong> Calle Ficticia #123, Ciudad Digital</p>
+        </div>
+        
+        <div class="footer-legal">
+            <h4>Información Legal</h4>
+            <ul>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 CreditJuli. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>

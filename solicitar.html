@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Crédito - CreditJuli</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a>
+                <img src="icons8-merchant-account-48.png"
+                alt="CreditJuli"
+                class="logo-imagen">
+                <h1 class="logo">CreditJuli</h1> </a>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="simulador.html">Simular Crédito</a></li>
+                <li><a href="solicitar.html" class="active">Solicitar Crédito</a></li> </ul>
+        </div>
+    </nav>
+
+    <div class="banner-solicitar">
+        <h1>Solicita tu Crédito Ideal</h1>
+        <p>Completa el formulario para iniciar tu proceso.</p>
+    </div>
+
+    <div class="main-content form-container">
+        <h1>Datos para la Solicitud de Crédito</h1>
+        <form class="credit-form" action="procesar-solicitud" method="POST">
+
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <div class="form-group">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                </div> 
+                <div class="form-group">
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required>
+                </div>
+                <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                </div> 
+            </fieldset>
+
+            <fieldset>
+                <legend>Datos del Crédito</legend>
+                
+                <div class="form-group">
+                    <label for="tipo_credito">Tipo de Crédito:</label>
+                    <select id="tipo_credito" name="tipo_credito" required>
+                            <option value="">Seleccione un producto</option>
+                            <option value="libreInversion">Crédito Libre Inversión</option>
+                            <option value="vehiculo">Crédito Vehículo</option>
+                            <option value="vivienda">Crédito Vivienda</option>
+                            <option value="educativo">Crédito Educativo</option>
+                            <option value="empresarial">Crédito Empresarial</option>
+                            <option value="para_viajar">Crédito Para Viajar</option>
+                        </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="monto_solicitado">Monto Solicitado:</label>
+                    <input type="number" id="monto_solicitado" name="monto_solicitado" min="500000" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="plazo_meses">Tipo de Plazo:</label>
+                    <select id="plazo_meses" name="plazo_meses" required>
+                        <option value="">Seleccione el plazo</option>
+                        <option value="12">12 meses</option>
+                        <option value="24">24 meses</option>
+                        <option value="36">36 meses</option>
+                        <option value="5">5 años</option>
+                        <option value="4">4 años</option>
+                    </select>
+                </div>
+                
+                <div class="form-group full-width-field"> 
+                    <label for="destino_credito">Destino del Crédito:</label>
+                    <textarea id="destino_credito" name="destino_credito" rows="3" required></textarea>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                
+                <legend>Datos Laborales</legend>
+                <div class="form-group">
+                <label for="empresa">Empresa donde trabaja:</label>
+                <input type="text" id="empresa" name="empresa">
+                </div>
+                <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <input type="text" id="cargo" name="cargo">
+                </div>
+                <div class="form-group">
+                <label for="ingresos">Ingresos Mensuales:</label>
+                <input type="number" id="ingresos" name="ingresos" min="0">
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="submit" class="btn primary">Enviar Solicitud</button>
+                <button type="reset" class="btn secondary">Limpiar Formulario</button>
+            </div>
+        </form>
+    </div>
+<footer>
+    <div class="container footer-grid">
+        <div class="footer-info">
+            <a href="index.html" class="logo-link">
+                <img src="icons8-merchant-account-48.png" alt="CreditJuli" class="logo-imagen">
+                <h1 class="logo">CreditJuli</h1>
+            </a>
+            <p class="footer-tagline">Tu aliado financiero para alcanzar grandes metas.</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/573001234567" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-links">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="simulador.html">Simulador de Crédito</a></li>
+                <li><a href="solicitar.html">Solicitar Crédito</a></li>
+                <li><a href="#">FAQ / Ayuda</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-contact">
+            <h4>Contáctanos</h4>
+            <p><strong>Teléfono:</strong> (123) 456-7890</p>
+            <p><strong>Email:</strong> contacto@creditjuli.com</p>
+            <p><strong>Dirección:</strong> Calle Principal #123, Ciudad Digital</p>
+        </div>
+        
+        <div class="footer-legal">
+            <h4>Información Legal</h4>
+            <ul>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 CreditJuli. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+    </body>
+</html>
